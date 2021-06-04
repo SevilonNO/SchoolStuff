@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"> 
+    <title>
+        I will conquer the world with code
+    </title>
+</head>
+<body onload="testOnLoad()">
+
+<p>Ferdighet 2a</p>
+<input type="text" onchange="testOnChange()" oninput="testOnInput()" />
+<h1 onmouseover="testOnMouseOver()" onmouseout="testOnMouseOut()">Hva er 2+4?</h1>
+<h3 onclick="doSomething(this)">Kabal</h3>
+<h2 id="a1" onclick="doSomething()"> 5</h2>
+<h2 id="a2" onclick="ksa()"> 7</h2>
+<h2 id="a3" onclick="dks()"> 3</h2>
+<h2 id="a4" onclick="dadads()"> 6</h2>
+<h1 id="info"></h1>
+
+<a href="https://www.w3schools.com/jsref/dom_obj_event.asp">Mer informasjon her</a>
+<script>
+   function testOnLoad() {
+            document.getElementById('info').innerHTML += '<li>onload</li>';
+        }
+    
+   function doSomething() {
+        document.getElementById('a1').innerHTML = 'Feil.';
+    } 
+    function testOnChange() {
+            document.getElementById('info').innerHTML += '<li>onchange</li>';
+     }
+    function testOnInput() {
+            document.getElementById('info').innerHTML += '<li>oninput</li>';
+    }
+    function testOnMouseOver() {
+            document.getElementById('info').innerHTML += '<li>onmouseover</li>';
+    }
+    function testOnMouseOut() {
+            document.getElementById('info').innerHTML += '<li>onmouseout</li>';
+    }
+    function dadads() {
+        document.getElementById('a4').innerHTML = 'Riktig!';
+    }
+    function dks() {
+        document.getElementById('a3').innerHTML = 'Feil.';
+    }
+    function ksa() {
+        document.getElementById('a2').innerHTML = 'Feil.';
+    }
+    function doSomething(makse) {
+        makse.innerHTML = 'Poete';
+    }
+</script>
+
+</body>
+
+
+
+</html>

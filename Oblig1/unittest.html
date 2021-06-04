@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Test Time</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.15.0.css">
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.15.0.js"></script>
+  <script src="loginCr.js"></script>
+ 
+
+  <script>
+    function updateView() {}
+    function loggedInView() {}
+  
+   
+    
+    QUnit.test('Riktig brukernavn og passord', function(assert) {
+      const actual = checkUnitTest("Morten", "Myhre");
+      const expected = "Du er logget inn!";
+        assert.equal(actual, expected);
+      });
+
+    QUnit.test('Ingenting skrevet inn', function(assert) {
+      const actual = checkUnitTest("");
+      const expected = "error";
+        assert.equal(actual, expected);
+      });
+
+    QUnit.test('Feil brukernavn eller passord', function(assert) {
+      const actual = checkUnitTest("Martin", "Boberg");
+      const expected = "error";
+        assert.equal(actual, expected);
+      });
+  </script>
+</body>

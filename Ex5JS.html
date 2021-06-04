@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ted</title>
+</head>
+<body onload="time">
+    <p>Ferdighet 5 - Kode som kjøres når siden lastes vs kode i en funksjon</p>
+    <button onclick="time()">Trykk her</button>
+    Prøv også å reloade siden.
+    <img src='https://coolwallpapers.me/th700/2628369-stars-4k-latest-computer-wallpaper.jpg'/>
+
+    <script>
+        var formattedDate = new Date().format('dd mmm, yyyy h:mm TT');
+
+        document.getElementById('time').innerHTML = formattedDate;
+         
+        function doClick() {
+            alert('Dette skjer i funksjonen doClick')
+        }
+    </script>
+</body>
+</html>

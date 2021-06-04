@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Kodelås</title>
+</head>
+<style>
+   div.page {
+       display: grid;
+       grid-template-columns: 30px 30px 30px;
+       grid-template-rows: 30px 30px 30px;
+   }
+   
+</style>
+<body>
+    <p>Kodelås</p>
+    <div class="page">
+    <button onclick="bu1()">1</button> 
+    <button onclick="bu2()">2</button> 
+    <button onclick="bu3()">3</button>
+    <button onclick="bu4()">4</button> 
+    <button onclick="bu5()">5</button> 
+    <button onclick="bu6()">6</button> 
+    <button onclick="bu7()">7</button> 
+    <button onclick="bu8()">8</button> 
+    <button onclick="bu9()">9</button> 
+</div>    
+<div id="info">Clicks:</div>
+
+    <script>
+        function bu1() {
+            document.getElementById('info').innerHTML += ' 1';
+        }
+        function bu2() {
+            document.getElementById('info').innerHTML += ' 2';
+        }
+        function bu3() {
+            document.getElementById('info').innerHTML += ' 3';
+        }
+        function bu4() {
+            document.getElementById('info').innerHTML += ' 4';
+        }
+        function bu5() {
+            document.getElementById('info').innerHTML += ' 5';
+        }
+        function bu6() {
+            document.getElementById('info').innerHTML += ' 6';
+        }
+        function bu7() {
+            document.getElementById('info').innerHTML += ' 7';
+        }
+        function bu8() {
+            document.getElementById('info').innerHTML += ' 8';
+        }
+        function bu9() {
+            document.getElementById('info').innerHTML += ' 9';
+        }
+    </script>
+</body>
+</html>

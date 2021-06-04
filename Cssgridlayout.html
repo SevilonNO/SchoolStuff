@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"></html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+div.header{
+background-color: blanchedalmond;
+grid-area: header;
+}
+div.menu{
+background-color: brown;
+grid-area: menu;
+}
+div.mainContent{
+background-color: cyan;
+grid-area: mainContent;
+}
+div.footer{
+background-color: darkgreen;
+grid-area: footer;
+}
+   
+        @media only screen and (max-width: 400px) {
+             div.page{
+          height: 100vh;  
+          display:grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 20fr 1fr 4fr 20px;
+          grid-template-areas: 'header header'
+                                'menu mainContent'
+                                'menu footer';
+             }
+        }
+    </style>
+   
+</head>
+
+<body>
+    <div class="page">
+<div class="header">Header</div>
+<div class="menu">Menu</div>
+<div class="mainContent">MainContent</div>
+<div class="footer"> Footer</div>
+    </div>
+</body>
+</html>

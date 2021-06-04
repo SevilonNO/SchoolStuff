@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .word {
+            font-size: 200%
+        }
+        .dark {
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body class="dark">
+    <div id="app"></div>
+
+    <script>
+        //Model
+        let correctWord = 'CODING';
+        let guessedWord = '??????';
+        let letter = '';
+        let isDarkMode = false;
+
+        //View
+        updateView();
+        function updateView() {
+            let solvedHtml = '';
+            if(guessedWord==correctWord){`
+                solvedHtml = '<div style"color: green"'>Løst!</div>`;
+            }
+            document.getElementById('app').innerHTML =`
+                <h3>Ordspill</h3>
+                <button onclick="switchDarkLight()">Dark/Light</button>
+                <div class="word">${guessedWord}</div>
+                <input 
+                type="txt" 
+                oninput="letter=this.value"
+                value="${letter}"
+                maxlength="1" 
+                size="1"
+                />
+                <button>Gjett</button>
+        `;
+            document.body.classList.toggle('dark', idDarkMode)
+        }
+
+        //Controller
+        function switchDarkLight() {
+            isDarkMode = !isDarkMode;
+            updateView();
+        }
+
+        function guess() {
+            
+        }
+
+    </script>
+</body>
+</html>
